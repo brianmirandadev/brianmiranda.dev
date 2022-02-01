@@ -1,0 +1,518 @@
+.projectstext {
+  color: #fe7281;
+  font-size: 60px;
+  text-align: center;
+  text-shadow: 1px 1px 0 #c35964, 2px 2px 0 #c35964, 3px 3px 0 #c35964,
+    8px 8px 0 transparent, 9px 9px 0 transparent, 10px 10px 0 transparent,
+    11px 11px 0 transparent, 12px 12px 0 transparent,
+    13px 16px 13px rgba(0, 0, 0, 0.4);
+}
+
+.projects {
+  width: 700px;
+  height: 628px;
+  border: 5px solid #262749;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3), -10px -10px 10px #2c2d55,
+    inset 10px 10px 10px rgba(0, 0, 0, 0.3), inset -10px -10px 10px #2c2d55;
+  padding: 30px;
+}
+.projectsgrid {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: grid;
+  grid-template-areas:
+    "a1 a1 a1 a1 a2 a2 a2 a2 a2"
+    "a1 a1 a1 a1 a2 a2 a2 a2 a2"
+    "a1 a1 a1 a1 a2 a2 a2 a2 a2"
+    "a1 a1 a1 a1 a2 a2 a2 a2 a2"
+    "a3 a3 a3 a4 a4 a4 a5 a5 a5"
+    "a3 a3 a3 a4 a4 a4 a5 a5 a5"
+    "a3 a3 a3 a4 a4 a4 a5 a5 a5"
+    "a3 a3 a3 a4 a4 a4 a5 a5 a5"
+    "a3 a3 a3 a4 a4 a4 a5 a5 a5";
+  gap: 10px;
+  overflow: hidden;
+}
+
+/*
+  ==============
+    Project 1
+  ==============
+*/
+
+.project1 {
+  position: relative;
+  background-color: #262749;
+  grid-area: a1;
+  border-radius: 10px;
+  animation: tactoeitcard 2s infinite alternate;
+}
+.project1:hover {
+  background-color: #fe7281;
+  animation: none;
+}
+
+.sneakpeek {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: white;
+  text-align: center;
+}
+.projecttitle {
+  font-size: 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.projecttitle h3 {
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.project1:hover h3 {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+
+.projecttitle::before {
+  content: "";
+  width: 0;
+  height: 5px;
+  border-radius: 0 50px 50px 0;
+  background-color: #fff6b8;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  transition: 0.5s;
+}
+.project1:hover .projecttitle::before {
+  width: 80%;
+  transition-delay: 0.2s;
+}
+
+.sneakpeek p {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.project1:hover p {
+  opacity: 1;
+  transition-delay: 0.6s;
+}
+
+.sneakpeek a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-family: Futura, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.project1:hover a {
+  opacity: 1;
+  transition-delay: 0.8s;
+}
+.sneakpeek a::before {
+  content: "";
+  width: 0%;
+  height: 5px;
+  background-color: #a7e8bd;
+  border-radius: 50px;
+  position: absolute;
+  bottom: -10px;
+  left: -10%;
+  transition: 0.5s;
+}
+.sneakpeek a:hover::before {
+  width: 120%;
+}
+
+@keyframes tactoeitcard {
+  0% {
+    background-color: #262749;
+  }
+  20% {
+    background-color: #262749;
+  }
+  40% {
+    background-color: #262749;
+  }
+  60% {
+    background-color: #262749;
+  }
+  80% {
+    background-color: #fe7281;
+  }
+  100% {
+    background-color: #fe7281;
+  }
+}
+
+/*
+  ==============
+    Project 2
+  ==============
+*/
+
+.project2 {
+  position: relative;
+  background-color: #262749;
+  grid-area: a2;
+  border-radius: 10px;
+  animation: currencyswitchcard 2s infinite alternate;
+  animation-delay: 1.25s;
+}
+.project2:hover {
+  background-color: #c7eae4;
+  animation: none;
+}
+
+.project2 .sneakpeek {
+  color: #262749;
+}
+.project2:hover h3 {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+.project2 .projecttitle::before {
+  background-color: #fe7281;
+}
+.project2:hover .projecttitle::before {
+  width: 80%;
+  transition-delay: 0.2s;
+}
+.project2:hover p {
+  opacity: 1;
+  transition-delay: 0.6s;
+}
+.project2 a {
+  color: #262749;
+}
+.project2 .sneakpeek a::before {
+  background-color: #fff6b8;
+}
+.project2:hover a {
+  opacity: 1;
+  transition-delay: 0.8s;
+}
+
+@keyframes currencyswitchcard {
+  0% {
+    background-color: #262749;
+  }
+  20% {
+    background-color: #262749;
+  }
+  40% {
+    background-color: #262749;
+  }
+  60% {
+    background-color: #262749;
+  }
+  80% {
+    background-color: #c7eae4;
+  }
+  100% {
+    background-color: #c7eae4;
+  }
+}
+
+/*
+  ==============
+    Project 3
+  ==============
+*/
+
+.project3 {
+  position: relative;
+  background-color: #262749;
+  grid-area: a3;
+  border-radius: 10px;
+  animation: luckyforcard 2s infinite alternate;
+  animation-delay: 2s;
+}
+.project3:hover {
+  background-color: #fff6b8;
+  animation: none;
+}
+
+.project3 .sneakpeek {
+  color: #262749;
+}
+.project3:hover h3 {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+.project3 .projecttitle::before {
+  background-color: #c7eae4;
+}
+.project3:hover .projecttitle::before {
+  width: 80%;
+  transition-delay: 0.2s;
+}
+.project3:hover p {
+  opacity: 1;
+  transition-delay: 0.6s;
+}
+.project3 a {
+  color: #262749;
+}
+.project3 .sneakpeek a::before {
+  background-color: #a7e8bd;
+}
+.project3:hover a {
+  opacity: 1;
+  transition-delay: 0.8s;
+}
+
+@keyframes luckyforcard {
+  0% {
+    background-color: #262749;
+  }
+  20% {
+    background-color: #262749;
+  }
+  40% {
+    background-color: #262749;
+  }
+  60% {
+    background-color: #262749;
+  }
+  80% {
+    background-color: #fff6b8;
+  }
+  100% {
+    background-color: #fff6b8;
+  }
+}
+
+/*
+  ==============
+    Project 4
+  ==============
+*/
+
+.project4 {
+  position: relative;
+  background-color: #262749;
+  grid-area: a4;
+  border-radius: 10px;
+  animation: taskistcard 2s infinite alternate;
+  animation-delay: 0.75s;
+}
+.project4:hover {
+  background-color: #a7e8bd;
+  animation: none;
+}
+
+.project4 .sneakpeek {
+  color: white;
+}
+.project4:hover h3 {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+.project4 .projecttitle::before {
+  background-color: #fff6b8;
+}
+.project4:hover .projecttitle::before {
+  width: 80%;
+  transition-delay: 0.2s;
+}
+.project4:hover p {
+  opacity: 1;
+  transition-delay: 0.6s;
+}
+.project4 a {
+  color: white;
+}
+.project4 .sneakpeek a::before {
+  background-color: #fe7281;
+}
+.project4:hover a {
+  opacity: 1;
+  transition-delay: 0.8s;
+}
+
+@keyframes taskistcard {
+  0% {
+    background-color: #262749;
+  }
+  20% {
+    background-color: #262749;
+  }
+  40% {
+    background-color: #262749;
+  }
+  60% {
+    background-color: #262749;
+  }
+  80% {
+    background-color: #a7e8bd;
+  }
+  100% {
+    background-color: #a7e8bd;
+  }
+}
+
+/*
+  ==============
+    Project 5
+  ==============
+*/
+
+.project5 {
+  position: relative;
+  background-color: #262749;
+  grid-area: a5;
+  border-radius: 10px;
+  animation: videoratecard 2s infinite alternate;
+  animation-delay: 3s;
+}
+.project5:hover {
+  background-color: #fe7281;
+  animation: none;
+}
+
+.project5 .sneakpeek {
+  color: white;
+}
+.project5:hover h3 {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+.project5 .projecttitle::before {
+  background-color: #a7e8bd;
+}
+.project5:hover .projecttitle::before {
+  width: 80%;
+  transition-delay: 0.2s;
+}
+.project5:hover p {
+  opacity: 1;
+  transition-delay: 0.6s;
+}
+.project5 a {
+  color: white;
+}
+.project5 .sneakpeek a::before {
+  background-color: #fff6b8;
+}
+.project5:hover a {
+  opacity: 1;
+  transition-delay: 0.8s;
+}
+
+@keyframes videoratecard {
+  0% {
+    background-color: #262749;
+  }
+  20% {
+    background-color: #262749;
+  }
+  40% {
+    background-color: #262749;
+  }
+  60% {
+    background-color: #262749;
+  }
+  80% {
+    background-color: #fe7281;
+  }
+  100% {
+    background-color: #fe7281;
+  }
+}
+
+/*
+  ==============
+  Media Queries
+  ==============
+*/
+
+@media screen and (max-width: 1360px) {
+  .projectstext {
+    font-size: 40px;
+  }
+
+  .projects {
+    width: 490px;
+    height: 439.6px;
+  }
+
+  /*===== project 1 =====*/
+
+  .projecttitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .sneakpeek p {
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .sneakpeek a {
+    font-size: 17px;
+    margin-top: 7px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .projectspage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .projectstext {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .projects {
+    width: 360px;
+    height: 309.6px;
+    padding: 20px;
+  }
+
+  /*===== project 1 =====*/
+
+  .projecttitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .sneakpeek p {
+    display: none;
+  }
+  .sneakpeek a {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .projects {
+    width: 290px;
+    height: 239.6px;
+    padding: 20px;
+  }
+}
